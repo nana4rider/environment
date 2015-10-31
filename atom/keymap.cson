@@ -1,0 +1,51 @@
+# Your keymap
+#
+# Atom keymaps work similarly to style sheets. Just as style sheets use
+# selectors to apply styles to elements, Atom keymaps use selectors to associate
+# keystrokes with events in specific contexts. Unlike style sheets however,
+# each selector can only be declared once.
+#
+# You can create a new keybinding in this file by typing "key" and then hitting
+# tab.
+#
+# Here's an example taken from Atom's built-in keymap:
+#
+# 'atom-text-editor':
+#   'enter': 'editor:newline'
+#
+# 'atom-workspace':
+#   'ctrl-shift-p': 'core:move-up'
+#   'ctrl-p': 'core:move-down'
+#
+# You can find more information about keymaps in these guides:
+# * https://atom.io/docs/latest/using-atom-basic-customization#customizing-key-bindings
+# * https://atom.io/docs/latest/behind-atom-keymaps-in-depth
+#
+# This file uses CoffeeScript Object Notation (CSON).
+# If you are unfamiliar with CSON, you can read more about it in the
+# Atom Flight Manual:
+# https://atom.io/docs/latest/using-atom-basic-customization#cson
+'.platform-win32':
+  'ctrl-t': 'application:new-file'
+'.platform-win32 atom-text-editor, .platform-linux atom-text-editor':
+  'ctrl-d': 'editor:delete-line'
+  'ctrl-f': 'find-and-replace:use-selection-as-find-pattern'
+  'alt-j': 'find-and-replace:select-next'
+  'alt-1': 'tree-view:toggle-focus'
+  'ctrl-e': 'unset!'
+'atom-text-editor:not([mini])':
+  'ctrl-d': 'editor:delete-line'
+  'shift-enter': 'editor:newline-below'
+'body':
+  'ctrl-e': 'recent-finder:toggle'
+  'ctrl-n': 'unset!'
+  'ctrl-shift-o': 'application:open-file'
+'.platform-win32 .find-and-replace .replace-container atom-text-editor':
+  'alt-a': 'find-and-replace:replace-all'
+'.platform-win32 .find-and-replace, .platform-linux .find-and-replace':
+  'alt-g': 'find-and-replace:toggle-regex-option'
+  'alt-s': 'find-and-replace:toggle-selection-option'
+  'alt-c': 'find-and-replace:toggle-case-option'
+  'alt-r': 'find-and-replace:toggle-whole-word-option'
+'atom-workspace':
+  'ctrl-q': 'goto-last-edit:run'
