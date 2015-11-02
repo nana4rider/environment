@@ -26,6 +26,7 @@
 # Atom Flight Manual:
 # https://atom.io/docs/latest/using-atom-basic-customization#cson
 '.platform-win32':
+  'ctrl-shift-r': 'fuzzy-finder:toggle-file-finder'
   'ctrl-t': 'application:new-file'
 '.platform-win32 atom-text-editor, .platform-linux atom-text-editor':
   'ctrl-d': 'editor:delete-line'
@@ -36,6 +37,9 @@
 'atom-text-editor:not([mini])':
   'ctrl-d': 'editor:delete-line'
   'shift-enter': 'editor:newline-below'
+'atom-text-editor':
+  'ctrl-p': 'expand-region:expand'
+  'ctrl-shift-p': 'expand-region:shrink'
 'body':
   'ctrl-e': 'recent-finder:toggle'
   'ctrl-n': 'unset!'
