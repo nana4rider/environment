@@ -44,6 +44,7 @@
   'ctrl-e': 'recent-finder:toggle'
   'ctrl-n': 'unset!'
   'ctrl-shift-o': 'application:open-file'
+  'F12': 'window:toggle-dev-tools'
 '.platform-win32 .find-and-replace .replace-container atom-text-editor':
   'alt-a': 'find-and-replace:replace-all'
 '.platform-win32 .find-and-replace, .platform-linux .find-and-replace':
