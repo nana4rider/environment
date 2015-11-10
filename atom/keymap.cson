@@ -30,7 +30,6 @@
   'ctrl-t': 'application:new-file'
 '.platform-win32 atom-text-editor, .platform-linux atom-text-editor':
   'ctrl-d': 'editor:delete-line'
-#  'ctrl-f': 'find-and-replace:use-selection-as-find-pattern'
   'alt-j': 'find-and-replace:select-next'
   'alt-1': 'tree-view:toggle-focus'
   'ctrl-e': 'unset!'
