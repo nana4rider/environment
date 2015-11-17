@@ -1,0 +1,75 @@
+/*
+ * インストールしたプラグイン一覧
+ * Japanize
+ * CaseConversion
+ * IMESupport
+ * RecentActiveFiles
+ *
+ */
+[
+	// タブ切り替え
+	{ "keys": ["ctrl+tab"], "command": "next_view" },
+    { "keys": ["ctrl+shift+tab"], "command": "prev_view" },
+
+    // 新規タブ
+    { "keys": ["ctrl+t"], "command": "new_file" },
+
+    // 行削除
+    { "keys": ["ctrl+d"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
+
+	// 行追加
+	{ "keys": ["shift+enter"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line.sublime-macro"} },
+
+    // 最近開いたファイル
+    { "keys": ["ctrl+e"], "command": "recent_active_files" },
+
+    // 検索/置換
+	{ "keys": ["ctrl+f"], "command": "show_panel", "args": {"panel": "replace", "reverse": false} },
+
+    // キャメルケース/スネークケース変換
+	{ "keys": ["ctrl+k", "ctrl+k"], "command": "toggle_snake_camel_pascal" },
+
+    // 検索時のボタン
+	{ "keys": ["enter"], "command": "find_next", "context":
+		[{"key": "panel", "operand": "replace"}, {"key": "panel_has_focus"}]
+	},
+	{ "keys": ["shift+enter"], "command": "find_prev", "context":
+		[{"key": "panel", "operand": "replace"}, {"key": "panel_has_focus"}]
+	},
+	{ "keys": ["alt+f"], "command": "find_all", "args": {"close_panel": true},
+		"context": [{"key": "panel", "operand": "replace"}, {"key": "panel_has_focus"}]
+	},
+	{ "keys": ["alt+a"], "command": "replace_all", "args": {"close_panel": true},
+		 "context": [{"key": "panel", "operand": "replace"}, {"key": "panel_has_focus"}]
+	},
+
+	// 検索時のオプション
+	{ "keys": ["alt+c"], "command": "toggle_case_sensitive", "context":
+		[
+			{ "key": "setting.is_widget", "operator": "equal", "operand": true }
+		]
+	},
+	{ "keys": ["alt+g"], "command": "toggle_regex", "context":
+		[
+			{ "key": "setting.is_widget", "operator": "equal", "operand": true }
+		]
+	},
+	{ "keys": ["alt+r"], "command": "toggle_whole_word", "context":
+		[
+			{ "key": "setting.is_widget", "operator": "equal", "operand": true }
+		]
+	},
+	{ "keys": ["alt+p"], "command": "toggle_preserve_case", "context":
+		[
+			{ "key": "setting.is_widget", "operator": "equal", "operand": true }
+		]
+	},
+
+	// 行入れ替え
+	{ "keys": ["ctrl+up"], "command": "swap_line_up" },
+	{ "keys": ["ctrl+down"], "command": "swap_line_down" },
+
+	// コンソールを開く
+	{ "keys": ["ctrl+,", "ctrl+c"], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
+	{ "keys": ["ctrl+,", "ctrl+b"], "command": "open_file", "args": {"contents": "[\n	$0\n]\n", "file": "${packages}/User/Default ($platform).sublime-keymap"} },
+]
