@@ -1,0 +1,7 @@
+package net.nana4.tstrans.bean;
+
+public class Item {
+	private String id;
+
+	private String text;
+}
