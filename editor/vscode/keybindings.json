@@ -1,0 +1,44 @@
+// 既定値を上書きするには、このファイル内にキー バインドを挿入します
+[
+{ "key": "ctrl+t",                "command": "workbench.action.files.newUntitledFile" },
+
+{ "key": "ctrl+n",                "command": "workbench.action.showAllSymbols" },
+
+{ "key": "ctrl+k ctrl+u",         "command": "extension.changeCase.upper",
+                                     "when": "editorTextFocus" },
+{ "key": "ctrl+k ctrl+l",         "command": "extension.changeCase.lower",
+                                     "when": "editorTextFocus" },
+{ "key": "ctrl+k ctrl+k",         "command": "extension.changeCase.pascal",
+                                     "when": "editorTextFocus" },
+{ "key": "ctrl+k ctrl+k",         "command": "extension.changeCase.camel",
+                                     "when": "editorTextFocus" },
+{ "key": "ctrl+k ctrl+s",         "command": "extension.changeCase.snake",
+                                     "when": "editorTextFocus" },
+
+{ "key": "ctrl+down",             "command": "editor.action.moveLinesDownAction",
+                                    "when": "editorTextFocus && !editorReadonly" },
+{ "key": "ctrl+up",               "command": "editor.action.moveLinesUpAction",
+                                    "when": "editorTextFocus && !editorReadonly" },
+
+{ "key": "ctrl+/",                "command": "editor.action.addCommentLine",
+                                    "when": "editorTextFocus && !editorReadonly" },
+{ "key": "ctrl+shift+/",          "command": "editor.action.removeCommentLine",
+                                    "when": "editorTextFocus && !editorReadonly" },
+
+{ "key": "shift+enter",           "command": "editor.action.insertLineAfter",
+                                    "when": "editorTextFocus && !editorReadonly" },
+
+{ "key": "alt+j",                 "command": "editor.action.addSelectionToNextFindMatch",
+                                     "when": "editorFocus" },
+
+{ "key": "ctrl+d",                "command": "editor.action.deleteLines",
+                                     "when": "editorTextFocus && !editorReadonly" },
+
+{ "key": "ctrl+pagedown",         "command": "workbench.action.openNextRecentlyUsedEditorInGroup" },
+{ "key": "ctrl+pageup",           "command": "workbench.action.openPreviousRecentlyUsedEditorInGroup" },
+{ "key": "ctrl+shift+tab",        "command": "workbench.action.previousEditor" },
+{ "key": "ctrl+tab",              "command": "workbench.action.nextEditor" },
+
+{ "key": "alt+g",                 "command": "toggleFindRegex",
+                                    "when": "editorFocus" }
+]
