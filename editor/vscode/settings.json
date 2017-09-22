@@ -1,5 +1,8 @@
 // 既定の設定を上書きするには、このファイル内に設定を挿入します
 {
     "workbench.editor.showTabs": true,
-    "window.openFilesInNewWindow": false
+    "window.openFilesInNewWindow": "off",
+    "git.ignoreLegacyWarning": true,
+    "workbench.editor.enablePreview": false,
+    "terminal.integrated.shell.windows": "C:\\windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe"
 }

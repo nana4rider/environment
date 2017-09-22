@@ -20,6 +20,8 @@
 { "key": "ctrl+up",               "command": "editor.action.moveLinesUpAction",
                                     "when": "editorTextFocus && !editorReadonly" },
 
+{ "key": "ctrl+shift+f",          "command": "editor.action.startFindReplaceAction" },
+
 { "key": "ctrl+/",                "command": "editor.action.addCommentLine",
                                     "when": "editorTextFocus && !editorReadonly" },
 { "key": "ctrl+shift+/",          "command": "editor.action.removeCommentLine",
@@ -39,6 +41,13 @@
 { "key": "ctrl+shift+tab",        "command": "workbench.action.previousEditor" },
 { "key": "ctrl+tab",              "command": "workbench.action.nextEditor" },
 
+{ "key": "alt+a",                 "command": "editor.action.replaceAll",
+                                     "when": "editorFocus && findWidgetVisible" },
 { "key": "alt+g",                 "command": "toggleFindRegex",
-                                    "when": "editorFocus" }
+                                    "when": "editorFocus" },
+
+{ "key": "alt+shift+r",               "command": "editor.action.changeAll",
+                                     "when": "editorTextFocus && !editorReadonly" }
+
 ]
+
